@@ -55,7 +55,13 @@ def _get_spreadsheet():
         gc = _get_client()
         if gc is None:
             return None
-        spreadsheet_id = st.secrets.get("SPREADSHEET_ID", "")
+        try:
+            spreadsheet_id = st.secrets["SPREADSHEET_ID"]
+        except Exception:
+            try:
+                spreadsheet_id = st.secrets["gcp_service_account"].get("spreadsheet_id", "")
+            except Exception:
+                spreadsheet_id = ""
         if not spreadsheet_id:
             return None
         return gc.open_by_key(spreadsheet_id)
@@ -67,7 +73,13 @@ def is_connected() -> bool:
     """Google Sheets 연결 가능 여부"""
     try:
         gc = _get_client()
-        sid = st.secrets.get("SPREADSHEET_ID", "")
+        try:
+            sid = st.secrets["SPREADSHEET_ID"]
+        except Exception:
+            try:
+                sid = st.secrets["gcp_service_account"].get("spreadsheet_id", "")
+            except Exception:
+                sid = ""
         return gc is not None and bool(sid)
     except Exception:
         return False

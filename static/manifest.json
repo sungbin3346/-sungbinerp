@@ -1,0 +1,27 @@
+{
+  "name": "영업 관리 ERP",
+  "short_name": "영업ERP",
+  "description": "생명공학 시약 기술영업 개인용 ERP — 납품·결제 관리",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8f9fc",
+  "theme_color": "#1e2235",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "/app/static/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/app/static/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"],
+  "screenshots": []
+}

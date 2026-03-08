@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# 환경변수 / 비밀 키 — 절대 커밋하지 않음
+.env
+.env.*
+secrets.toml
+
+# Streamlit 로컬 설정 (config.toml 은 포함)
+# .streamlit/secrets.toml 은 제외
+.streamlit/secrets.toml
+
+# 가상환경
+venv/
+.venv/
+env/
+
+# 에디터
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PM2 (배포 서버 전용, Cloud 불필요)
+ecosystem.config.cjs
+
+# 로그
+*.log
+
+# 임시 파일
+*.tmp
+*.bak

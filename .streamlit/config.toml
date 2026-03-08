@@ -1,18 +1,7 @@
 [server]
-port = 3000
-address = "0.0.0.0"
 headless = true
-enableCORS = false
-enableXsrfProtection = false
-enableStaticServing = true
-
-[browser]
-gatherUsageStats = false
+address = "0.0.0.0"
+port = 8501
 
 [theme]
-base = "light"
-primaryColor = "#4F8BF9"
-backgroundColor = "#f8f9fc"
-secondaryBackgroundColor = "#ffffff"
-textColor = "#1a1a2e"
-font = "sans serif"
+primaryColor = "#4A90D9"
